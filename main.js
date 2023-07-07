@@ -49,6 +49,16 @@ class TMDbApi {
   }
 }
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').then((registration) => {
+      console.log('Service Worker зарегистрирован: ', registration);
+    }).catch((error) => {
+      console.log('Ошибка регистрации Service Worker: ', error);
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("add-movie-form");
   const movieTitleInput = document.getElementById("movie-title");
