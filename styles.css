@@ -25,9 +25,9 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
-/* Стили для формы добавления фильма */
 #add-movie-form {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 2rem;
 }
@@ -74,4 +74,23 @@ h2 {
 
 #movie-list li:last-child {
     margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    main {
+        padding: 1rem;
+    }
+
+    #add-movie-form {
+        flex-direction: column;
+    }
+
+    #add-movie-form input {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    #add-movie-form button {
+        width: 100%;
+    }
 }
