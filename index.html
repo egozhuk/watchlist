@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src https:;">
+    <title>Watchlist</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Фильмы к промотру</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Добавить фильм</h2>
+            <form id="add-movie-form">
+                <label for="movie-title">Название фильма:</label>
+                <input type="text" id="movie-title" name="movieTitle" required>
+                <button type="submit">Добавить</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Список фильмов</h2>
+            <ul id="movie-list">
+                
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
